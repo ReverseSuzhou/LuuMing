@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?><!--主页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/association_page_relativelayout"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/association_page_linearlayout_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_search"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/association_page_linearlayout_1_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!--搜索按钮-->
+            <ImageButton
+                android:id="@+id/association_page_1_1_button_search"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:src="@drawable/search" />
+            <!--搜索输入提示框-->
+            <TextView
+                android:id="@+id/association_page_1_1_autocompletetextview_mEditSearch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:dropDownVerticalOffset="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHighlight="#B4DF87"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--空白框-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#aa000000" />
+
+    <LinearLayout
+        android:id="@+id/association_page_linearlayout_2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:id="@+id/error_association"
+            android:text="空空如也"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:visibility="gone"
+            android:id="@+id/swipe_association"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_association"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_mp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/home"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_association"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/social"
+            android:gravity="center"
+            android:paddingLeft="0dp"/>
+        <RadioButton
+            android:id="@+id/rb_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/add"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_message"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/comment"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_user"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/user"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+    </RadioGroup>
+</LinearLayout>

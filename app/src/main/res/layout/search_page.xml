@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/shape_search"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            >
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_margin="7dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search"/>
+
+                <!--                    <EditText-->
+                <!--                        android:id="@+id/mEditSearch"-->
+                <!--                        android:maxLines="1"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:ellipsize="end"-->
+                <!--                        android:background="@null"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:hint="荒野求生贝爷"-->
+                <!--                        android:imeOptions="actionSearch"-->
+                <!--                        />-->
+                <AutoCompleteTextView
+
+                    android:id="@+id/mEditSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:dropDownVerticalOffset="10dp"
+                    android:ellipsize="end"
+                    android:hint="荒野求生贝爷"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHighlight="#B4DF87"
+                    android:textSize="18dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            android:layout_weight="1"
+            <Button
+                android:id="@+id/cancel"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:text="取消"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:text="热搜"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    />
+                <TextView
+                    android:id="@+id/news_one"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="加载中......"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    />
+                <TextView
+                    android:id="@+id/news_two"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="加载中......"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    />
+                <TextView
+                    android:id="@+id/news_three"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="加载中......"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    />
+                <TextView
+                    android:id="@+id/news_four"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="加载中......"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    />
+                <TextView
+                    android:id="@+id/news_five"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="加载中......"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    />
+                <TextView
+                    android:id="@+id/news_six"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp"
+                    android:text="加载中......"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:text="搜索历史"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            <TextView
+
+                android:id="@+id/his_unfold"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:text="展开"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.nex3z.flowlayout.FlowLayout
+        android:layout_margin="10dp"
+        android:id="@+id/flowLayout_his"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flMaxRows="2"
+        app:flChildSpacing="10dp"
+        app:flChildSpacingForLastRow="align"
+        app:flRowSpacing="8dp"
+        app:flRtl="false"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+
+                android:layout_margin="10dp"
+                android:src="@drawable/delete_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/clean_his"
+                    android:textSize="15dp"
+                    android:text="清空搜索历史"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:text="搜索发现"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            <TextView
+
+                android:id="@+id/dis_visible"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:text="隐藏"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.nex3z.flowlayout.FlowLayout
+        android:layout_margin="10dp"
+        android:id="@+id/flowLayout_dis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flMaxRows="2"
+        app:flChildSpacing="10dp"
+        app:flChildSpacingForLastRow="align"
+        app:flRowSpacing="8dp"
+        app:flRtl="false"/>
+
+
+
+</LinearLayout>

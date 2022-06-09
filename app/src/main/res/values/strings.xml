@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">问渠</string>
+    <string name="hot">热点</string>
+    <string name="rec">推荐</string>
+</resources>

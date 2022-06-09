@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?><!--消息页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_page_linearlayout"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/message_page_relativelayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <!--消息文本显示框-->
+        <TextView
+            android:id="@+id/message_page_1_textview_message"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_text"
+            android:gravity="center"
+            android:text="消息"
+            android:textSize="25sp" />
+        <!--返回按钮-->
+        <ImageButton
+            android:id="@+id/message_page_1_button_back"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/message_page_1_textview_message"
+            android:background="@drawable/background_button"
+            app:srcCompat="@drawable/back" />
+        <!--刷新按钮-->
+        <ImageButton
+            android:id="@+id/message_page_1_button_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/message_page_1_textview_message"
+            android:background="@drawable/background_button"
+            app:srcCompat="@drawable/refresh" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/message_page_linearlayout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/message_page_relativelayout_2_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <!--通知图像显示-->
+            <ImageView
+                android:id="@+id/message_page_2_1_imageview_notification"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notification" />
+            <!--点赞图像显示-->
+            <ImageView
+                android:id="@+id/message_page_2_1_imageview_praise"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/message_page_2_1_imageview_notification"
+                android:src="@drawable/good" />
+            <!--关注图像显示-->
+            <ImageView
+                android:id="@+id/message_page_2_1_imageview_concern"
+                android:layout_weight="1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_toEndOf="@+id/message_page_2_1_imageview_praise"
+                android:src="@drawable/concern" />
+            <!--评论图像显示-->
+            <ImageView
+                android:id="@+id/message_page_2_1_imageview_comment"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/message_page_2_1_imageview_concern"
+                android:src="@drawable/comment" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/message_page_relativelayout_2_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--通知开关-->
+            <RadioButton
+                android:id="@+id/message_page_2_2_button_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:textAlignment="center"
+                android:checked="true"
+                android:text="通知"
+                android:textSize="20sp" />
+            <!--点赞开关-->
+            <RadioButton
+                android:id="@+id/message_page_2_2_button_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:textAlignment="center"
+                android:checked="false"
+                android:text="点赞"
+                android:textSize="20sp" />
+            <!--关注开关-->
+            <RadioButton
+                android:id="@+id/message_page_2_2_button_concern"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:textAlignment="center"
+                android:checked="false"
+                android:text="关注"
+                android:textSize="20sp"/>
+            <!--评论开关-->
+            <RadioButton
+                android:id="@+id/message_page_2_2_button_comment"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:textAlignment="center"
+                android:checked="false"
+                android:text="评论"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <!--空白框-->
+        <View
+            android:id="@+id/collect_page_view_blank"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#aa000000" />
+
+        <LinearLayout
+            android:id="@+id/main_page_linearlayout_3"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:id="@+id/error_message"
+                android:text="空空如也"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:visibility="gone"
+                android:id="@+id/swipe_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?><!--主页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_page_relativelayout"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#fcfcfd"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/main_page_linearlayout_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_search"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/main_page_linearlayout_1_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!--搜索按钮-->
+            <ImageButton
+                android:id="@+id/main_page_1_1_button_search"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:src="@drawable/search" />
+            <!--搜索输入提示框-->
+            <TextView
+                android:id="@+id/main_page_1_1_autocompletetextview_mEditSearch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:dropDownVerticalOffset="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHighlight="#B4DF87"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--空白框-->
+    <View
+        android:id="@+id/history_record_page_1_view_blank"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#aa000000" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/main_page_linearlayout_2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:orientation="horizontal">-->
+<!--        &lt;!&ndash;热点按钮&ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/main_page_2_button_HotSpot"-->
+<!--            android:layout_width="65dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            android:text="热点"-->
+<!--            tools:ignore="MissingConstraints"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginTop="5dp"/>-->
+<!--        &lt;!&ndash;推荐按钮&ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/main_page_2_button_Recommend"-->
+<!--            android:layout_width="65dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            android:text="推荐"-->
+<!--            tools:ignore="MissingConstraints"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginTop="5dp"/>-->
+<!--        &lt;!&ndash;学习按钮&ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/main_page_2_button_Study"-->
+<!--            android:layout_width="65dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            android:text="学习"-->
+<!--            tools:ignore="MissingConstraints"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginTop="5dp"/>-->
+<!--        &lt;!&ndash;运动按钮&ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/main_page_2_button_Sport"-->
+<!--            android:layout_width="65dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            android:text="运动"-->
+<!--            tools:ignore="MissingConstraints"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginTop="5dp"/>-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+
+            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:id="@+id/hometab"
+            android:background="@drawable/shape_myinfo"
+            app:stl_underlineThickness="1px"
+            app:stl_underlineColor="@color/white"
+            app:stl_indicatorWithoutPadding="true"
+            app:stl_indicatorThickness="2dp"
+            app:stl_indicatorInterpolation="linear"
+            app:stl_indicatorColor="@color/black"
+            app:stl_dividerColor="@color/white"
+            app:stl_distributeEvenly="true"
+            app:stl_defaultTabTextSize="20sp"
+            app:stl_defaultTabTextHorizontalPadding="5dp"
+            app:stl_defaultTabTextColor="#000000"
+            android:clipToPadding="false"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/homevp"
+            android:layout_width="match_parent"
+            android:layout_height="560dp"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_mp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/home"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_association"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/social"
+            android:gravity="center"
+            android:paddingLeft="0dp"/>
+        <RadioButton
+            android:id="@+id/rb_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/add"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_message"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/comment"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_user"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/user"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+    </RadioGroup>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/main_page_linearlayout_4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:orientation="horizontal">-->
+<!--        &lt;!&ndash;主页面&ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/main_page_4_button_main_page"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            app:srcCompat="@drawable/home"-->
+<!--            tools:ignore="MissingConstraints" />-->
+<!--        &lt;!&ndash;社团页面&ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/main_page_4_button_associations_page"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="27dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            app:srcCompat="@drawable/social"-->
+<!--            tools:ignore="MissingConstraints" />-->
+<!--        &lt;!&ndash;编辑页面&ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/main_page_4_button_editor_page"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="27dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            app:srcCompat="@drawable/add"-->
+<!--            tools:ignore="MissingConstraints" />-->
+<!--        &lt;!&ndash;消息页面&ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/main_page_4_button_message_page"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="27dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            app:srcCompat="@drawable/comment"-->
+<!--            tools:ignore="MissingConstraints" />-->
+<!--        &lt;!&ndash;个人页面&ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/main_page_4_button_personal_page"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="27dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/background_button"-->
+<!--            app:srcCompat="@drawable/user"-->
+<!--            tools:ignore="MissingConstraints" />-->
+<!--    </LinearLayout>-->
+</LinearLayout>

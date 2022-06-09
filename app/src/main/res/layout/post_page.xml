@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?><!--测试帖页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_page_linearlayout"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/post_page_linearlayout_1_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <!--返回按钮-->
+        <Button
+            android:id="@+id/post_page_1_1_button_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/back" />
+
+        <!--主题-->
+        <TextView
+            android:id="@+id/post_page_1_1_textview_theme"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:text="主题~测试帖"
+            android:gravity="center"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <View
+        android:id="@+id/post_page_linearlayout_1_view_cut1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/post_page_linearlayout_1_2"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/post_page_relativelayout_1_2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--用户-->
+            <TextView
+                android:id="@+id/post_page_1_2_1_textview_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Mine"
+                android:textSize="20sp" />
+
+            <!--发布时间-->
+            <TextView
+                android:id="@+id/post_page_1_2_1_textview_post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/post_page_1_2_1_textview_username"
+                android:text="2022-3-4 （15：28）"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/post_page_linearlayout_1_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!--帖子内容-->
+        <TextView
+            android:id="@+id/post_page_1_3_textview_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="这是Test的第一个测试帖，内容自行脑补，期待大家的点赞和收藏！"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <View
+        android:id="@+id/post_page_linearlayout_1_view_cut2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:id="@+id/post_page_linearlayout_1_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <!--点赞-->
+        <Button
+            android:id="@+id/post_page_1_4_button_praise"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/good" />
+
+        <!--收藏-->
+        <Button
+            android:id="@+id/post_page_1_4_button_collect"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/favorite" />
+
+        <!--评论-->
+        <Button
+            android:id="@+id/post_page_1_4_button_comment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/comment" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/post_page_linearlayout_1_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <!--期待评论文本提示框-->
+        <TextView
+            android:id="@+id/post_page_1_5_textview_comment_expectation"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_margin="10dp"
+            android:text="期待您的评论"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

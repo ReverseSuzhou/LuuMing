@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><!--更换手机号页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/replace_phone_page_LinearLayout"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/replace_phone_page_relativelayout_1_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <!--更换手机号文本显示框-->
+        <TextView
+            android:id="@+id/replace_phone_page_1_1_textview_display"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_text"
+            android:gravity="center"
+            android:text="更换手机号"
+            android:textSize="25sp" />
+        <!--返回按钮-->
+        <ImageButton
+            android:id="@+id/replace_phone_page_1_1_button_back"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/replace_phone_page_1_1_textview_display"
+            android:background="@drawable/background_button"
+            app:srcCompat="@drawable/back" />
+        <!--刷新按钮-->
+        <ImageButton
+            android:id="@+id/replace_phone_page_1_1_button_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/replace_phone_page_1_1_textview_display"
+            android:background="@drawable/background_button"
+            app:srcCompat="@drawable/refresh" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/replace_phone_page_relativelayout_1_view_cut1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#aa000000" />
+    <!--更换手机号提示信息文本显示框-->
+    <TextView
+        android:id="@+id/replace_phone_page_relativelayout_1_textview_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="请输入旧手机号确定身份以及新手机号获取验证码。"
+        android:textSize="15sp" />
+    <View
+        android:id="@+id/replace_phone_page_relativelayout_1_view_cut2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#aa000000" />
+    <!--旧手机号文本编辑框-->
+    <EditText
+        android:id="@+id/OldPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_text"
+        android:inputType="phone"
+        android:hint="旧手机号"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+    <!--新手机号文本编辑框-->
+    <EditText
+        android:id="@+id/NewPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_text"
+        android:inputType="phone"
+        android:hint="新手机号"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/replace_phone_page_relativelayout_1_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+        <!--新手机验证码输入框-->
+        <EditText
+            android:id="@+id/replace_phone_page_1_2_edittext_verification_code"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/background_text"
+            android:inputType="numberPassword" />
+        <!--获取新手机验证码按钮-->
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/replace_phone_page_1_2_edittext_verification_code"
+            android:background="@drawable/background_button"
+            android:text="获取新手机验证码"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!--确定按钮-->
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/background_button"
+        android:text="确定"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</LinearLayout>

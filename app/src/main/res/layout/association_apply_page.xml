@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?><!--社团申请页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/association_apply_page_linearlayout"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/association_apply_page_relativelayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <!--社团申请文本显示框-->
+        <TextView
+            android:id="@+id/association_apply_page_1_textview_display"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_text"
+            android:gravity="center"
+            android:text="社团申请"
+            android:textSize="25sp" />
+        <!--返回按钮-->
+        <ImageButton
+            android:id="@+id/association_apply_page_1_button_back"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/association_apply_page_1_textview_display"
+            android:background="@drawable/background_button"
+            app:srcCompat="@drawable/back" />
+        <!--刷新按钮-->
+        <ImageButton
+            android:id="@+id/association_apply_page_1_button_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/association_apply_page_1_textview_display"
+            android:background="@drawable/background_button"
+            app:srcCompat="@drawable/refresh" />
+    </RelativeLayout>
+    <!--提示文本框-->
+    <TextView
+        android:id="@+id/association_apply_page_textview_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择您的身份"
+        android:padding="10dp"
+        android:textSize="14sp"/>
+    <!--按钮组-->
+    <RadioGroup
+        android:id="@+id/association_apply_page_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--社团负责人按钮-->
+        <RadioButton
+            android:id="@+id/association_apply_page_radiobutton_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="社团负责人"
+            android:checked="true"
+            android:layout_marginLeft="10dp"/>
+        <!--社团普通成员按钮-->
+        <RadioButton
+            android:id="@+id/association_apply_page_radiobutton_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="社团普通会员"
+            android:layout_marginLeft="15dp"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/association_apply_page_textview_label_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="您选择的标签：社团负责人"
+        android:padding="10dp"/>
+    <!--社团名框-->
+    <EditText
+        android:id="@+id/association_apply_page_edittext_community_name"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_text"
+        android:hint="社团名"
+        android:inputType="textMultiLine"
+        android:lines="6"
+        android:padding="5dp" />
+    <!--手机号框-->
+    <EditText
+        android:id="@+id/association_apply_page_edittext_phone_number"
+        android:layout_width="377dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_text"
+        android:hint="手机号"
+        android:inputType="textMultiLine"
+        android:lines="6"
+        android:padding="5dp" />
+    <!--获取验证码按钮-->
+    <Button
+        android:id="@+id/association_apply_page_button_get_verification_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取验证码" />
+    <!--验证码-->
+    <EditText
+        android:id="@+id/association_apply_page_edittext_upload_photo_evidence"
+        android:layout_width="121dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_text"
+        android:padding="8dp"
+        android:hint="输入验证码" />
+
+
+    <!--此处需要实现图片权限-->
+    <!--上传照片按钮-->
+    <ImageButton
+        android:id="@+id/association_apply_page_button_upload_photo"
+        android:layout_width="120dp"
+        android:layout_height="101dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/add" />
+
+    <!---->
+    <Button
+        android:id="@+id/association_apply_page_button_ensure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/background_button"
+        android:text="确定"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"/>
+
+</LinearLayout>

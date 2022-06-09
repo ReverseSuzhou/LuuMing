@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?><!--个人页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/personal_page_relativelayout"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/personal_page_linearlayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--头像显示框-->
+        <!--昵称文本显示框-->
+        <ImageButton
+            android:id="@+id/personal_page_1_button_userpicture"
+            android:layout_width="240px"
+            android:layout_height="240px"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/default_userpicture" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:id="@+id/personal_page_1_textview_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="昵称"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personal_page_1_textview_sign"
+                    android:paddingLeft="20dp"
+                    android:text="个性签名:"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/personal_page_1_textview_signature"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:hint="这个人什么都没有留下"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/personal_page_linearlayout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--历史记录图像开关-->
+        <ImageButton
+            android:id="@+id/personal_page_2_button_history"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_button"
+            android:src="@drawable/ic_reloadtime" />
+        <!--收藏图像开关-->
+        <!--绑定手机图像开关-->
+
+        <ImageButton
+            android:id="@+id/personal_page_2_button_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_button"
+            android:src="@drawable/ic_star" />
+
+        <ImageButton
+            android:id="@+id/personal_page_2_button_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_button"
+            android:src="@drawable/ic_mobile" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/personal_page_linearlayout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--历史记录文本显示框-->
+        <TextView
+            android:id="@+id/personal_page_3_textview_historytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="历史"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <!--收藏文本显示框-->
+        <TextView
+            android:id="@+id/personal_page_3_textview_collecttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="收藏"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <!--绑定手机文本显示框-->
+        <TextView
+            android:id="@+id/personal_page_3_textview_exphonetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="绑定"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/personal_page_button_association_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/background_button"
+        android:text="申请社团"
+        android:textSize="20sp"/><![CDATA[
+
+    >
+    ]]>
+
+    <Button
+        android:id="@+id/personal_page_button_exinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button"
+        android:text="完善个人信息"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/personal_page_button_myrelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="我的帖子"
+        android:textSize="20sp"
+        android:background="@drawable/background_button"/>
+
+    <Button
+        android:id="@+id/personal_page_button_cancellation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="注销账号"
+        android:textSize="20sp"
+        android:background="@drawable/background_button"/>
+
+    <LinearLayout
+        android:id="@+id/personal_page_linearlayout_4"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_mp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/home"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_association"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/social"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/add"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_message"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/comment"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+        <RadioButton
+            android:id="@+id/rb_user"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/user"
+            android:gravity="center"
+            android:paddingLeft="0dp" />
+    </RadioGroup>
+</LinearLayout>
