@@ -8,7 +8,7 @@
     android:background="@drawable/zzu"
     tools:context=".MainActivity">
 
-    <!--问渠两个字-->
+    <!--智慧论坛四个字-->
     <TextView
         android:id="@+id/tv_one"
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         android:shadowDx="10.0"
         android:shadowDy="8.0"
         android:shadowRadius="10.0"
-        android:text="问   渠"
+        android:text="智 慧 论 坛"
         android:textColor="#FF0055FF"
         android:textSize="60sp"
         android:textStyle="bold" />
@@ -129,7 +129,7 @@
         android:shadowDy="8.0"
         android:shadowRadius="10.0"
         android:singleLine="true"
-        android:text="汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智汇智"
+        android:text="鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣"
         android:textColor="#FFFFFFFF"
         android:textSize="15sp"
         android:textStyle="italic"
