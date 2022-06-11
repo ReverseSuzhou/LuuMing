@@ -132,7 +132,6 @@
         android:text="鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣鹿鸣"
         android:textColor="#FFFFFFFF"
         android:textSize="15sp"
-        android:textStyle="italic"
-        />
+        android:textStyle="italic" />
 
 </LinearLayout>
