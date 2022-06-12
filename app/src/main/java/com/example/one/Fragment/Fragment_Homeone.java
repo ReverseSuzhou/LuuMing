@@ -1,5 +1,5 @@
 package com.example.one.Fragment;
-
+//热点(显示点赞数最高的10个帖子)
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

@@ -1,11 +1,6 @@
 package com.example.one;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -14,32 +9,21 @@ import android.os.Bundle;
 
 
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.one.Adapter.HomeAdapter;
-import com.example.one.Bean.Push;
 import com.example.one.Fragment.Fragment_HomeFour;
 import com.example.one.Fragment.Fragment_HomeThree;
 import com.example.one.Fragment.Fragment_HomeTwo;
 import com.example.one.Fragment.Fragment_Homeone;
+import com.example.one.temp.AssociationActivity;
+import com.example.one.temp.EditorActivity;
+import com.example.one.temp.MessageActivity;
+import com.example.one.temp.SaveSharedPreference;
+import com.example.one.temp.SearchActivity;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
-
-import org.xml.sax.SAXException;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 public class HomePage extends AppCompatActivity {
     //声明控件
@@ -104,34 +88,40 @@ public class HomePage extends AppCompatActivity {
                 finish();
             }
         });
-        //社团圈
-        mBtn_association.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(HomePage.this, AssociationActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        //发帖子
-        mBtn_editor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(HomePage.this, EditorActivity.class);
-                startActivity(intent);
-            }
-        });
-        //消息
-        mBtn_message.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(HomePage.this, MessageActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
+//
+//        //社团圈
+//        mBtn_association.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(HomePage.this, AssociationActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
+//        //发帖子
+//        mBtn_editor.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(HomePage.this, EditorActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        //消息
+//        mBtn_message.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(HomePage.this, MessageActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//
+
         //个人信息
         mBtn_personal.setOnClickListener(new View.OnClickListener() {
             @Override

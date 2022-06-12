@@ -7,21 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.one.util.StorePicturesUtil;
+import com.example.one.temp.SaveSharedPreference;
 import com.example.one.util.ToastUtil;
 import androidx.annotation.NonNull;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements PermissionInterface {
 
@@ -123,9 +119,14 @@ public class MainActivity extends AppCompatActivity implements PermissionInterfa
                                     saveSharedPreference.setUserId(rs.getInt("User_id"));
                                     saveSharedPreference.setPassword(rs.getString("U_password"));
                                     saveSharedPreference.setPhone(rs.getString("User_phone"));
+
+
+                                    //自动登录按钮
                                     if (rBtAutomaticLogin.isChecked()) {
                                         saveSharedPreference.open();
                                     }
+
+
                                 }
                             }
                         } catch (SQLException e) {

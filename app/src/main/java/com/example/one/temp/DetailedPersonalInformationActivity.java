@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.one.DBUtils;
+import com.example.one.R;
 import com.example.one.util.StorePicturesUtil;
 
 import java.sql.ResultSet;

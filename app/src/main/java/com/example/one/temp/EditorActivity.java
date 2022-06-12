@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -26,6 +26,11 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.one.DBUtils;
+import com.example.one.HomePage;
+import com.example.one.PermissionHelper;
+import com.example.one.PermissionInterface;
+import com.example.one.R;
 import com.example.one.util.StorePicturesUtil;
 import com.example.one.util.ToastUtil;
 

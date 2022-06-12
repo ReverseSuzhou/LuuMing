@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,6 +21,9 @@ import com.example.one.Bean.Comment;
 import com.example.one.Bean.Message;
 import com.example.one.Bean.Notice;
 import com.example.one.Bean.Push;
+import com.example.one.DBUtils;
+import com.example.one.HomePage;
+import com.example.one.R;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -92,7 +95,7 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(MessageActivity.this,HomePage.class);
+                intent = new Intent(MessageActivity.this, HomePage.class);
                 startActivity(intent);
                 finish();
             }

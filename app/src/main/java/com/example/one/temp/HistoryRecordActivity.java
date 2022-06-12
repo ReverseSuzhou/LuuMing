@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,10 +13,12 @@ import android.widget.TextView;
 
 import com.example.one.Adapter.HomeAdapter;
 import com.example.one.Bean.Push;
+import com.example.one.DBUtils;
+import com.example.one.PersonalActivity;
+import com.example.one.R;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -59,7 +61,7 @@ public class HistoryRecordActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(HistoryRecordActivity.this,PersonalActivity.class);
+                intent = new Intent(HistoryRecordActivity.this, PersonalActivity.class);
                 startActivity(intent);
             }
         });

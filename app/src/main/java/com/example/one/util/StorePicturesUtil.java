@@ -4,23 +4,15 @@ package com.example.one.util;
 import android.content.ContentResolver;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.util.Base64;
-import android.util.Log;
 
-import com.example.one.DBUtils;
-import com.example.one.SaveSharedPreference;
+import com.example.one.temp.SaveSharedPreference;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.OutputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 
 public class StorePicturesUtil {

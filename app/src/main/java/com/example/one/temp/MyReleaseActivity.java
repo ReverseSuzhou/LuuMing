@@ -1,8 +1,7 @@
-package com.example.one;
+package com.example.one.temp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
@@ -15,6 +14,9 @@ import android.widget.TextView;
 
 import com.example.one.Adapter.HomeAdapter;
 import com.example.one.Bean.Push;
+import com.example.one.DBUtils;
+import com.example.one.PersonalActivity;
+import com.example.one.R;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenu;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuBridge;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuCreator;
@@ -70,7 +72,7 @@ public class MyReleaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(MyReleaseActivity.this,PersonalActivity.class);
+                intent = new Intent(MyReleaseActivity.this, PersonalActivity.class);
                 startActivity(intent);
             }
         });

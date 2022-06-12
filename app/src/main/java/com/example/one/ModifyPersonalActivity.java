@@ -9,13 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.one.temp.SaveSharedPreference;
 import com.example.one.util.ToastUtil;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class ModifyPersonalActivity extends AppCompatActivity {
     EditText user_nameEDT;

@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,42 +13,39 @@ import android.widget.TextView;
 
 import com.example.one.Adapter.HomeAdapter;
 import com.example.one.Bean.Push;
+import com.example.one.DBUtils;
+import com.example.one.PersonalActivity;
+import com.example.one.R;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ResultActivity extends AppCompatActivity {
+public class CollectActivity extends AppCompatActivity {
     //声明控件
     private ImageButton mBtn_back;
-    private ImageButton mBtn_search;
-    private SwipeRefreshLayout swipe_result;
-    private RecyclerView rv_result;
-    private TextView error_result;
+    private SwipeRefreshLayout swipe_collect;
+    private RecyclerView rv_collect;
+    private TextView error_collect;
     private List<Push> data = new LinkedList<>();
     private HomeAdapter adapter;
-    private TextView mEditSearch;
-    private String info;
     DBUtils db;
     ResultSet rs;
     Thread t;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.result_page);
+        setContentView(R.layout.collect_page);
 
-        //控件
-        mBtn_back = findViewById(R.id.result_page_1_1_imageview_back);
-        mBtn_search = findViewById(R.id.result_page_1_2_1_imagebutton_search);
-        mEditSearch = findViewById(R.id.result_page_1_2_1_edittext_mEditSearch);
-        swipe_result = findViewById(R.id.swipe_result);
-        rv_result= findViewById(R.id.rv_result);
-        error_result= findViewById(R.id.error_result);
+        //控件部分
+        mBtn_back = findViewById(R.id.collect_page_1_button_back);
+        swipe_collect = findViewById(R.id.swipe_collect);
+        rv_collect = findViewById(R.id.rv_collect);
+        error_collect = findViewById(R.id.error_collect);
 
-        swipe_result.setColorSchemeResources(android.R.color.holo_green_light,android.R.color.holo_red_light,android.R.color.holo_blue_light);
-        swipe_result.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+        swipe_collect.setColorSchemeResources(android.R.color.holo_green_light,android.R.color.holo_red_light,android.R.color.holo_blue_light);
+        swipe_collect.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 try {
@@ -58,24 +55,13 @@ public class ResultActivity extends AppCompatActivity {
                 }
             }
         });
-        Intent intent = getIntent();
-        info = intent.getStringExtra("info");
-        mEditSearch.setText(info);
+
         //返回
         mBtn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(ResultActivity.this,HomePage.class);
-                startActivity(intent);
-            }
-        });
-        //搜索
-        mBtn_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(ResultActivity.this,ResultActivity.class);
+                intent = new Intent(CollectActivity.this, PersonalActivity.class);
                 startActivity(intent);
             }
         });
@@ -87,15 +73,16 @@ public class ResultActivity extends AppCompatActivity {
     }
     private void Refresh() throws SQLException{
 
-        swipe_result.setRefreshing(false);
+        swipe_collect.setRefreshing(false);
+
         data.clear();
         try {
             t = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     db = new DBUtils();
-                    String temp = "select * from admin_forumt where Forumt_content like '%"+info+"%';";
-                    rs = db.query(temp);
+                    rs = db.query("select * from admin_forumt, collect where collect.User_phone = '"+ new SaveSharedPreference().getPhone()
+                    +"' and collect.Forumt_id = admin_forumt.Forumt_id order by Forumt_date desc;");
                     try {
                         while(rs.next()){
                             Push po = new Push();
@@ -127,14 +114,14 @@ public class ResultActivity extends AppCompatActivity {
         }
         while(t.isAlive() == true);
         if(data.size()>0){
-            swipe_result.setRefreshing(false);
-            swipe_result.setVisibility(View.VISIBLE);
-            adapter = new HomeAdapter(ResultActivity.this,data);
-            rv_result.setLayoutManager(new LinearLayoutManager(ResultActivity.this));
-            rv_result.setAdapter(adapter);
+            swipe_collect.setRefreshing(false);
+            swipe_collect.setVisibility(View.VISIBLE);
+            adapter = new HomeAdapter(CollectActivity.this,data);
+            rv_collect.setLayoutManager(new LinearLayoutManager(CollectActivity.this));
+            rv_collect.setAdapter(adapter);
         }
         else {
-            error_result.setVisibility(View.VISIBLE);
+            error_collect.setVisibility(View.VISIBLE);
         }
 
     }

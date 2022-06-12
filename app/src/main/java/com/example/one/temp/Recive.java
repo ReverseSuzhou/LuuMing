@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -23,6 +23,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.one.Adapter.ReviewAdapter;
 import com.example.one.Bean.Comment;
+import com.example.one.DBUtils;
+import com.example.one.R;
 import com.example.one.util.StorePicturesUtil;
 
 
@@ -33,8 +35,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Recive extends AppCompatActivity {
 

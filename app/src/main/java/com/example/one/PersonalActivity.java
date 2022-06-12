@@ -22,6 +22,18 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 
+import com.example.one.temp.AssociationActivity;
+import com.example.one.temp.AssociationApplyActivity;
+import com.example.one.temp.CollectActivity;
+import com.example.one.temp.CompressImage;
+import com.example.one.temp.CropImage;
+import com.example.one.temp.CropImageResult;
+import com.example.one.temp.DetailedPersonalInformationActivity;
+import com.example.one.temp.EditorActivity;
+import com.example.one.temp.HistoryRecordActivity;
+import com.example.one.temp.MessageActivity;
+import com.example.one.temp.ReplacePhoneActivity;
+import com.example.one.temp.SaveSharedPreference;
 import com.example.one.util.StorePicturesUtil;
 
 import java.io.IOException;
@@ -251,33 +263,38 @@ public class PersonalActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //历史记录
-        mBtn_history.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(PersonalActivity.this,HistoryRecordActivity.class);
-                startActivity(intent);
-            }
-        });
-        //收藏
-        mBtn_collect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(PersonalActivity.this,CollectActivity.class);
-                startActivity(intent);
-            }
-        });
-        //修改手机号
-        mBtn_replace_phone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(PersonalActivity.this,ReplacePhoneActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
+//
+//        //历史记录
+//        mBtn_history.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(PersonalActivity.this, HistoryRecordActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        //收藏
+//        mBtn_collect.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(PersonalActivity.this, CollectActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        //修改手机号
+//        mBtn_replace_phone.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(PersonalActivity.this, ReplacePhoneActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+
         //修改个人信息
         mBtn_modify.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -287,33 +304,36 @@ public class PersonalActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //申请社团
-        mBtn_apply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(PersonalActivity.this,AssociationApplyActivity.class);
-                startActivity(intent);
-            }
-        });
-        //我的帖子
-        mBtn_myrelease.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(PersonalActivity.this, MyReleaseActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
-        //更改头像
-        mBtn_userpicture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                display();
-            }
-        });
+
+//        //申请社团
+//        mBtn_apply.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(PersonalActivity.this, AssociationApplyActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        //我的帖子
+//        mBtn_myrelease.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(PersonalActivity.this, MyReleaseActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+
+//        //更改头像
+//        mBtn_userpicture.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                display();
+//            }
+//        });
 
         rBt_cancellation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -349,34 +369,39 @@ public class PersonalActivity extends AppCompatActivity {
                 finish();
             }
         });
-        //社团圈
-        mBtn_association.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(PersonalActivity.this,AssociationActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        //发帖子
-        mBtn_editor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(PersonalActivity.this,EditorActivity.class);
-                startActivity(intent);
-            }
-        });
-        //消息
-        mBtn_message.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(PersonalActivity.this, MessageActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
+//        //社团圈
+//        mBtn_association.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(PersonalActivity.this, AssociationActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
+//        //发帖子
+//        mBtn_editor.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(PersonalActivity.this, EditorActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        //消息
+//        mBtn_message.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(PersonalActivity.this, MessageActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+
+
         //个人信息
         mBtn_personal.setOnClickListener(new View.OnClickListener() {
             @Override

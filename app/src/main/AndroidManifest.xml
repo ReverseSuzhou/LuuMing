@@ -57,44 +57,44 @@
                 android:resource="@xml/file_paths" />
         </provider>
         <activity
-            android:name=".DetailedPersonalInformationActivity"
+            android:name=".temp.DetailedPersonalInformationActivity"
             android:exported="false" />
         <activity
-            android:name=".MyReleaseActivity"
+            android:name=".temp.MyReleaseActivity"
             android:exported="false" />
         <activity
-            android:name=".ReplacePhoneActivity"
+            android:name=".temp.ReplacePhoneActivity"
             android:exported="false" />
         <activity
             android:name=".ModifyPersonalActivity"
             android:exported="false" />
         <activity
-            android:name=".AssociationApplyActivity"
+            android:name=".temp.AssociationApplyActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryRecordActivity"
+            android:name=".temp.HistoryRecordActivity"
             android:exported="false" />
         <activity
-            android:name=".SearchActivity"
+            android:name=".temp.SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultActivity"
+            android:name=".temp.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".CollectActivity"
+            android:name=".temp.CollectActivity"
             android:exported="false" />
         <activity
-            android:name=".EditorActivity"
+            android:name=".temp.EditorActivity"
             android:exported="false" />
         <activity
-            android:name=".MessageActivity"
+            android:name=".temp.MessageActivity"
             android:exported="false" />
         <activity
             android:name=".PersonalActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".AssociationActivity"
+            android:name=".temp.AssociationActivity"
             android:exported="false" />
         <activity
             android:name=".HomePage"
@@ -114,7 +114,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Recive" />
+        <activity android:name=".temp.Recive" />
     </application>
 
 </manifest>

@@ -1,10 +1,11 @@
-package com.example.one;
+package com.example.one.temp;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.example.one.Bean.Push;
+import com.example.one.DBUtils;
+import com.example.one.R;
 import com.nex3z.flowlayout.FlowLayout;
 
 import android.content.Intent;

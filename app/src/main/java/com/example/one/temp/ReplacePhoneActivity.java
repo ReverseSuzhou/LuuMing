@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.example.one.DBUtils;
+import com.example.one.MainActivity;
+import com.example.one.PersonalActivity;
+import com.example.one.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -137,7 +142,7 @@ public class ReplacePhoneActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(ReplacePhoneActivity.this,PersonalActivity.class);
+                intent = new Intent(ReplacePhoneActivity.this, PersonalActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,9 +1,8 @@
-package com.example.one;
+package com.example.one.temp;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,14 +20,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.one.DBUtils;
+import com.example.one.HomePage;
+import com.example.one.PersonalActivity;
+import com.example.one.R;
 import com.example.one.util.StorePicturesUtil;
-import com.example.one.util.ToastUtil;
 import com.mob.MobSDK;
 
 import org.json.JSONException;

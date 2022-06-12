@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 
 import android.app.Activity;
 import android.graphics.Bitmap;

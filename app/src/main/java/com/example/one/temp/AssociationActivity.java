@@ -1,4 +1,4 @@
-package com.example.one;
+package com.example.one.temp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,17 +8,18 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.one.Adapter.HomeAdapter;
 import com.example.one.Bean.Push;
+import com.example.one.DBUtils;
+import com.example.one.HomePage;
+import com.example.one.PersonalActivity;
+import com.example.one.R;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class AssociationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(AssociationActivity.this,SearchActivity.class);
+                intent = new Intent(AssociationActivity.this, SearchActivity.class);
                 startActivity(intent);
             }
         });
@@ -84,7 +85,7 @@ public class AssociationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(AssociationActivity.this,HomePage.class);
+                intent = new Intent(AssociationActivity.this, HomePage.class);
                 startActivity(intent);
                 finish();
             }
@@ -104,7 +105,7 @@ public class AssociationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(AssociationActivity.this,EditorActivity.class);
+                intent = new Intent(AssociationActivity.this, EditorActivity.class);
                 startActivity(intent);
             }
         });
@@ -122,7 +123,7 @@ public class AssociationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = null;
-                intent = new Intent(AssociationActivity.this,PersonalActivity.class);
+                intent = new Intent(AssociationActivity.this, PersonalActivity.class);
                 startActivity(intent);
                 finish();
             }
