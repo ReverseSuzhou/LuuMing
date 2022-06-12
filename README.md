@@ -1,4 +1,5 @@
 # LuuMing
+# 下面划掉，我自己的as默认提交到这里了。。。
 # 最好不要提交到main这个分支
 # 提交到master那个分支
 # git push -u origin master
