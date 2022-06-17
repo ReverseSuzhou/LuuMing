@@ -48,14 +48,14 @@ public class HomePage extends AppCompatActivity {
 
         //搜索
         tv_search = findViewById(R.id.main_page_1_1_autocompletetextview_mEditSearch);
-        tv_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = null;
-                intent = new Intent(HomePage.this, SearchActivity.class);
-                startActivity(intent);
-            }
-        });
+//        tv_search.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = null;
+//                intent = new Intent(HomePage.this, SearchActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
 //↓↓↓↓↓↓↓↓底下五个按钮的跳转功能↓↓↓↓↓↓↓↓
@@ -76,7 +76,7 @@ public class HomePage extends AppCompatActivity {
         initView();
         viewPager.setOffscreenPageLimit(5);
 
-        initTab();
+        //initTab();
 
         //主页面
         mBtn_home.setOnClickListener(new View.OnClickListener() {
