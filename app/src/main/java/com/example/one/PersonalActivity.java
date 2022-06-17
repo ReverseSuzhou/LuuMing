@@ -372,35 +372,35 @@ public class PersonalActivity extends AppCompatActivity {
         });
 
 
-//        //社团圈
-//        mBtn_association.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = null;
-//                intent = new Intent(PersonalActivity.this, AssociationActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-//        //发帖子
-//        mBtn_editor.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = null;
-//                intent = new Intent(PersonalActivity.this, EditorActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        //消息
-//        mBtn_message.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = null;
-//                intent = new Intent(PersonalActivity.this, MessageActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
+        //社团圈
+        mBtn_association.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = null;
+                intent = new Intent(PersonalActivity.this, AssociationActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        //发帖子
+        mBtn_editor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = null;
+                intent = new Intent(PersonalActivity.this, EditorActivity.class);
+                startActivity(intent);
+            }
+        });
+        //消息
+        mBtn_message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = null;
+                intent = new Intent(PersonalActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         //个人信息
